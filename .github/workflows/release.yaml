@@ -2,8 +2,8 @@
 name: Release
 
 on:  # yamllint disable-line rule:truthy
-  push:
-    branches: [main]
+  #push:
+  #  branches: [main]
   workflow_dispatch:
 
 jobs:
