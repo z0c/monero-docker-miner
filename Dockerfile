@@ -37,4 +37,4 @@ RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /et
 WORKDIR /xmr
 COPY --from=builder /miner/xmrig/build/xmrig /xmr
 
-CMD ["sh", "-c", "./xmrig --url=$POOL --user=$WALLET --pass=$WORKER_NAME"]
+CMD ["sh", "-c", "./xmrig --url=$POOL --user=$WALLET --pass=$WORKER_NAME --no-color"]
