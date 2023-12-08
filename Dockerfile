@@ -1,4 +1,4 @@
-FROM alpine:3.18 AS builder
+FROM alpine:3.19 AS builder
 
 ARG XMRIG_VERSION='v6.20.0'
 WORKDIR /miner
@@ -21,7 +21,7 @@ RUN cd xmrig/build && \
     cmake .. -DCMAKE_BUILD_TYPE=Release && \
     make -j$(nproc)
 
-FROM alpine:3.18
+FROM alpine:3.19
 LABEL owner="z0c"
 
 ENV WALLET=42zNo1RtQD5GoxnoCCWH5b1EnPdGmrzZMG7PpWQTQpTCHSX2uFX7q1EbRCo2MMJ2JgCaxi4keqL87iNuFajN6hTR1DMLbkb
